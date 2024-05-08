@@ -1,6 +1,7 @@
 import random
 
 def game():
+    score=0
     cont=True
 
     print("welcome to HigherLower!")
@@ -23,11 +24,13 @@ def game():
         if HL == "h" and num2 > num:
             cont=True
             num=num2
+            score+=1
         if HL == "l" and num2 < num:
             cont=True
             num=num2
+            score+=1
         if cont == False: 
-            print("wrong :(")
+            print("wrong :( your score was ", score,"!")
             if input("play again?(Y/N)") == "y":
                 game()
             else:
